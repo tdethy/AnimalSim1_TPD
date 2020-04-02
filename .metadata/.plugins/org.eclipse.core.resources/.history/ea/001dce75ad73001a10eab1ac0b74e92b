@@ -1,0 +1,63 @@
+
+	public class Application {
+
+		public static void main(String[] args) {
+			
+
+			System.out.println("--------------------------------------");
+			System.out.println("Location Tests");
+			System.out.println("--------------------------------------");
+			
+
+			Location l = new Location(12,15);
+			
+			l.update(12,15);
+			l.getCoordinates();
+			
+			
+			
+			System.out.println("--------------------------------------");
+			System.out.println("Animal");
+			System.out.println("--------------------------------------");
+			
+			
+			Animal.setSimID(5);
+			A.setLocation[10,15];
+			A.setFull(true);
+			A.setRested(true);
+			System.out.println("\n\n" + A.getSimID() + " " + A.getLocation() + " " + A.isFull() + " " + A.isRested());
+
+			System.out.println("--------------------------------------");
+			System.out.println("GoldFinch");
+			System.out.println("--------------------------------------");
+			
+			
+			Goldfinch G = new Goldfinch("7", [4,16], true, false, 6.0);
+			G.setSimID(3);
+			G.setLocation[12,12];
+			G.setFull(false);
+			G.setRested(false);
+			G.setWingSpan(6.0);
+			System.out.println("\n\n" + G.getSimID() + " " + G.getLocation() + " " + G.isFull() + " " + G.isRested() + " " + G.getWingSpan());
+			
+			
+			System.out.println("--------------------------------------");
+			System.out.println("BrownBear");
+			System.out.println("--------------------------------------");
+			
+			BrownBear BB = new BrownBear();
+			
+			BrownBear BB = new BrownBear(7, (4,16), true, false, "Alaskan");
+			BB.setSimID(7);
+			BB.setLocation[4,16];
+			BB.setFull(true);
+			BB.setRested(false);
+			BB.setSubSpecies("Alaskan");
+			System.out.println("\n\n" + BB.getSimID() + " " + BB.getLocation() + " " + BB.isFull() + " " + BB.isRested() + " " + BB.getSubSpecies());
+			
+			
+			System.out.println("--------------------------------------");
+
+		}
+
+}

@@ -1,0 +1,104 @@
+import java.util.Random;
+
+public abstract class Animal{
+
+	Random generator = new Random();
+	protected int simID;
+	int[] location;
+	protected boolean full;
+	protected boolean rested;
+	
+/*	class InvalidSimIDException extends RuntimeException{
+		public InvalidSimIDException(int a) {
+			simID=a;
+		}
+	}
+	
+	
+	if (simID<0) {
+		throw new InvalidSimIDException(simID);
+		System.out.println("ID cannot be less than 0");
+		
+	}*/
+	
+	public Animal() {
+		super();
+		this.simID = 0;
+		this.location = location;
+		this.full = false;
+		this.rested = true;
+	}
+
+
+	/**
+	 * @param simID
+	 * @param location
+	 * @param full
+	 * @param rested
+	 */
+	public Animal(int simID, int[] location, boolean full, boolean rested) {
+		super();
+		this.simID = simID;
+		this.location = location;
+		this.full = full;
+		this.rested = rested;
+	}
+
+	public boolean eat() {
+		float a = generator.nextFloat();
+		if (a < .5)
+			return this.full = true;
+			else
+				return this.full = false;
+	}
+	
+	public boolean sleep() {
+		float a = generator.nextFloat();
+		if (a < .5)
+			return this.rested = true;
+			else
+				return this.rested = false;
+	}
+
+
+	public int getSimID() {
+		return simID;
+	}
+
+
+	public void setSimID(int simID) {
+		this.simID = simID;
+	}
+
+
+	public int[] getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(int[] location) {
+		this.location = location;
+	}
+
+
+	public boolean isFull() {
+		return full;
+	}
+
+
+	public void setFull(boolean full) {
+		this.full = full;
+	}
+
+
+	public boolean isRested() {
+		return rested;
+	}
+
+
+	public void setRested(boolean rested) {
+		this.rested = rested;
+	}
+	
+	
+}

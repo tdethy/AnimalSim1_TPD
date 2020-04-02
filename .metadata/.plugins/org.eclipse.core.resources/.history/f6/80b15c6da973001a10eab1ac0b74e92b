@@ -1,0 +1,86 @@
+
+	public class Application {
+
+		public static void main(String[] args) {
+			
+
+			System.out.println("--------------------------------------");
+			System.out.println("Location Tests");
+			System.out.println("--------------------------------------");
+			
+
+			Location loc = new Location(12,15);
+			System.out.println("\n" + loc.displayData() + "\n");
+			build.draw();
+			System.out.println();
+			
+			build.setProjectName("The Building");
+			System.out.println(build.getProjectName());
+		
+			build.setCompleteAddress("1600 Pennsylvania Ave NW, Washington, DC 20500");
+			System.out.println(build.getCompleteAddress());
+			build.setTotalSquareFeet(55000);
+			
+			System.out.println(build.getTotalSquareFeet());
+			build.setOccupencyGroup("Residential");
+			System.out.println(build.getOccupencyGroup());
+			build.setSubGroup("R1");
+			
+			System.out.println(build.getSubGroup());
+			System.out.println();
+			System.out.println(build.toString());
+			
+			
+			System.out.println("--------------------------------------");
+			System.out.println("Animal");
+			System.out.println("--------------------------------------");
+			
+			Animal A = new Animal("5",[10,15], true, true);
+			
+			A.setSimID(5);
+			System.out.println("\n\n" + A.getSimID());
+			
+			A.setLocation[10,15];
+			System.out.println("\n\n" + A.getLocation());
+			
+			A.setFull(true);
+			System.out.println("\n\n" + A.isFull());
+			
+			A.setRested(true);
+			System.out.println("\n\n" + A.isRested());
+			
+
+			System.out.println("--------------------------------------");
+			System.out.println("GoldFinch");
+			System.out.println("--------------------------------------");
+			
+			
+			Goldfinch G = new Goldfinch("6", "[12,12]", false, false, 6.0);
+			G.setSimID(3);
+			G.setLocation[12,12];
+			G.setFull(false);
+			G.setRested(false);
+			G.setWingSpan(6.0);
+			System.out.println("\n\n" + G.getSimID() + " " + G.getLocation() + " " + G.isFull() + " " + G.isRested() + " " + G.getWingSpan());
+			
+			
+			System.out.println("--------------------------------------");
+			System.out.println("BrownBear");
+			System.out.println("--------------------------------------");
+			
+			BrownBear BB = new BrownBear();
+			
+			BrownBear BB = new BrownBear("7", "[4,16]", true, false, Alaskan);
+			BB.setSimID(7);
+			BB.setLocation[4,16];
+			BB.setFull(true);
+			BB.setRested(false);
+			BB.setSubSpecies("Alaskan");
+			System.out.println("\n\n" + BB.getSimID() + " " + BB.getLocation() + " " + BB.isFull() + " " + BB.isRested() + " " + BB.getSubSpecies());
+			
+			
+			System.out.println("--------------------------------------");
+
+		}
+
+}

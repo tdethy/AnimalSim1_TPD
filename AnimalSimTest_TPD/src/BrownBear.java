@@ -1,0 +1,51 @@
+/**
+ * 
+ * @author trentondethy
+ *
+ */
+public class BrownBear extends Animal{
+
+	String subSpecies;
+	/**
+	 * open constructor for BrownBear
+	 */
+	public BrownBear() {
+		super();
+		this.simID = 0;
+		this.full = false;
+		this.rested = true;
+		this.subSpecies = "Alaskan";
+	}//end open constructor
+
+	/**
+	 * preferred constructor 
+	 * @param simID
+	 * @param location
+	 * @param full
+	 * @param rested
+	 */
+	public BrownBear(int simID, int[] location, boolean full, boolean rested, String subSpecies) {
+		super(simID, location, full, rested);
+		this.subSpecies = subSpecies;
+		this.simID = simID;
+		this.location = location;
+		this.full = false;
+		this.rested = true;
+	}//end preferred constructor
+/**
+ * getter for subSpecies
+ * @return supSpecies
+ */
+	public String getSubSpecies() {
+		return subSpecies;
+	}
+/**
+ * setter for subSpecies
+ * @param subSpecies
+ */
+	public void setSubSpecies(String subSpecies) {
+		this.subSpecies = subSpecies;
+	}
+
+	
+}

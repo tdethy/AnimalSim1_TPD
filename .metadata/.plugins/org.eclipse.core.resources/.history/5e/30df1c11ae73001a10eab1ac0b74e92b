@@ -1,0 +1,40 @@
+
+public class BrownBear extends Animal implements Walkable, Swimmable{
+
+	String subSpecies;
+	
+	public BrownBear() {
+		super();
+		this.simID = 0;
+		this.location = [0,0];
+		this.full = false;
+		this.rested = true;
+		this.subSpecies = "Alaskan";
+	}
+
+	/**
+	 * @param simID
+	 * @param location
+	 * @param full
+	 * @param rested
+	 */
+	public BrownBear(int simID, Location location, boolean full, boolean rested, String subSpecies) {
+		super(simID, location, full, rested);
+		// TODO Auto-generated constructor stub
+		this.subSpecies = subSpecies;
+		this.simID = simID;
+		this.location = location;
+		this.full = false;
+		this.rested = true;
+	}
+
+	public String getSubSpecies() {
+		return subSpecies;
+	}
+
+	public void setSubSpecies(String subSpecies) {
+		this.subSpecies = subSpecies;
+	}
+
+	
+}

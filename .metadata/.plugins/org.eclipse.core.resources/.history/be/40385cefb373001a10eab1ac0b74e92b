@@ -1,0 +1,58 @@
+
+	public class Application {
+
+		public static void main(String[] args) {
+			
+
+			System.out.println("--------------------------------------");
+			System.out.println("Location Tests");
+			System.out.println("--------------------------------------");
+			
+
+			Location l = new Location(12,15);
+			
+			l.update(12,15);
+			l.getCoordinates();
+			System.out.println("Location "+ l);
+			
+			
+			System.out.println("--------------------------------------");
+			System.out.println("Animal");
+			System.out.println("--------------------------------------");
+			
+			
+			System.out.println("Cannot Instantiate an Abstract Class");
+			System.out.println("");
+			
+			System.out.println("--------------------------------------");
+			System.out.println("GoldFinch");
+			System.out.println("--------------------------------------");
+			
+			int[] location = {12,12};
+			Goldfinch G = new Goldfinch(7, location, true, false, 6.0);
+			G.setSimID(3);
+			G.setFull(false);
+			G.setRested(false);
+			G.setWingSpan(6.0);
+			System.out.println("\n\n" + "SimID: "+ G.getSimID() + " " + "Location" + G.getLocation() + " " + "Full: " + G.isFull() + " " + "Rested: " + G.isRested() + " " + "Wing Span (in cm): "+ G.getWingSpan());
+			
+			
+			System.out.println("--------------------------------------");
+			System.out.println("BrownBear");
+			System.out.println("--------------------------------------");
+			
+			int[] ll = {4,16};
+			
+			BrownBear BB = new BrownBear(7, ll, true, false, "Alaskan");
+			BB.setSimID(7);
+			BB.setFull(true);
+			BB.setRested(false);
+			BB.setSubSpecies("Alaskan");
+			System.out.println("\n\n" + BB.getSimID() + " " + BB.getLocation() + " " + BB.isFull() + " " + BB.isRested() + " " + BB.getSubSpecies());
+			
+			
+			System.out.println("--------------------------------------");
+
+		}
+
+}

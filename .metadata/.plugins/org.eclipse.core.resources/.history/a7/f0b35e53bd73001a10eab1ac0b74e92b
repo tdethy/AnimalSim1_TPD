@@ -1,0 +1,104 @@
+
+	public class Application {
+
+		public static void main(String[] args) {
+			
+
+			System.out.println("--------------------------------------");
+			System.out.println("Location Tests");
+			System.out.println("--------------------------------------");
+			
+
+			int[] l = new int[]{12,15};
+			
+			//l.update(12,15);
+			//l.getCoordinates();
+			System.out.println(l);
+			
+			InvalidCoordinateException p = 
+					new InvalidCoordinateException("Exception, Coordinates are below 0");
+			if (l.xCoord<0)
+				throw p;
+			else 
+				if (l.yCoord<0)
+					throw p;
+				else
+					System.out.println(" ");
+			
+			System.out.println("--------------------------------------");
+			System.out.println("Animal");
+			System.out.println("--------------------------------------");
+			
+			
+			InvalidCoordinateException t = 
+					new InvalidCoordinateException("Exception, Sim ID must be an integer greater than 0");
+			int simID=0;
+			
+			if (simID<0)
+				throw t;
+			
+			
+			System.out.println("Cannot Instantiate an Abstract Class");
+			System.out.println("");
+			
+			System.out.println("--------------------------------------");
+			System.out.println("GoldFinch");
+			System.out.println("--------------------------------------");
+			
+			double wingSpan1 = 7.0;
+			InvalidCoordinateException q = 
+					new InvalidCoordinateException("Exception, Coordinates are below 0");
+			if (wingSpan1 < 5.0 || wingSpan1 > 11.0)
+				throw q;
+			
+			double wingSpan2 = 13.0;
+			InvalidCoordinateException r = 
+					new InvalidCoordinateException("Exception, Coordinates are below 0");
+			if (wingSpan2 < 5.0 || wingSpan2 > 11.0)
+				throw r;
+			
+			
+			
+			int[] location = {12,12};
+			Goldfinch G = new Goldfinch(7, location, true, false, 6.0);
+			G.setSimID(3);
+			G.setFull(false);
+			G.setRested(false);
+			G.setWingSpan(6.0);
+		
+			System.out.println("SimID: "+ G.getSimID());
+			System.out.println("Location" + G.getLocation());
+			System.out.println("Full: " + G.isFull());
+			System.out.println("Rested: " + G.isRested());
+			System.out.println("Wing Span (in cm): "+ G.getWingSpan());
+			
+			System.out.println("--------------------------------------");
+			System.out.println("BrownBear");
+			System.out.println("--------------------------------------");
+			
+			String subSpecies = "Teddy";
+			
+			InvalidSubSpeciesException u = 
+					new InvalidSubSpeciesException("Exception, not a valid species");
+			if (!subSpecies.equals("Alaskan") || !subSpecies.equals("Asiatic") || !subSpecies.equals("European") || !subSpecies.equals("Grizzly") || !subSpecies.equals("Kodiak") || !subSpecies.equals("Siberian"))
+					throw u;
+			
+			int[] ll = {4,16};
+			
+			BrownBear BB = new BrownBear(7, ll, true, false, "Alaskan");
+			BB.setSimID(7);
+			BB.setFull(true);
+			BB.setRested(false);
+			BB.setSubSpecies("Alaskan");
+			
+			System.out.println("SimID: "+ BB.getSimID());
+			System.out.println("Location" + BB.getLocation());
+			System.out.println("Full: " + BB.isFull());
+			System.out.println("Rested: " + BB.isRested());
+			System.out.println("Sub Species: "+ BB.getSubSpecies());
+			
+			System.out.println("--------------------------------------");
+
+		}
+
+}
